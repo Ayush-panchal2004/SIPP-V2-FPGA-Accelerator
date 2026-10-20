@@ -2,7 +2,7 @@
 
 [![SystemVerilog](https://img.shields.io/badge/Language-SystemVerilog-blue.svg)](https://en.wikipedia.org/wiki/SystemVerilog)
 [![FPGA Target](https://img.shields.io/badge/FPGA-Xilinx%20Zynq--7000%20(xc7z020)-red.svg)](https://www.xilinx.com/products/silicon-devices/soc/zynq-7000.html)
-[![Board](https://img.shields.io/badge/Board-PYNQ--Z2-orange.svg)](http://www.pynq.io/)
+[![Board](https://img.shields.io/badge/Board-PYNQ--Z1-orange.svg)](http://www.pynq.io/)
 [![Precision](https://img.shields.io/badge/Precision-IEEE--754%20FP32-success.svg)](https://en.wikipedia.org/wiki/Single-precision_floating-point_format)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![IIT Madras](https://img.shields.io/badge/Institution-IIT%20Madras-800000.svg)](https://www.iitm.ac.in/)
@@ -36,7 +36,7 @@ Sparse Matrix-Vector Multiplication (**SpMV**) is the primary computational kern
    - Standard AXI4-Stream slave (`s_axis`) and master (`m_axis`) handshaking (`TVALID`/`TREADY`/`TLAST`).
    - Seamlessly interfaces with Xilinx AXI DMA for high-speed DDR memory transfers.
 5. **Proven Physical Silicon Handoff (`fpga/bitstream/design_1_V4.bit`)**:
-   - Synthesized, implemented, and verified in hardware on the PYNQ-Z2 development board.
+   - Synthesized, implemented, and verified in hardware on the PYNQ-Z1 development board.
 
 ---
 
@@ -75,7 +75,7 @@ Sparse Matrix-Vector Multiplication (**SpMV**) is the primary computational kern
 
 ## 📊 FPGA Resource Utilization (`xc7z020clg400-1`)
 
-Synthesized and placed on the PYNQ-Z2 Zynq-7000 SoC at 100 MHz fabric clock:
+Synthesized and placed on the PYNQ-Z1 Zynq-7000 SoC at 100 MHz fabric clock:
 
 | Resource | Used by SIPP V2 Core | Available on Chip | Utilization (%) |
 | :--- | :---: | :---: | :---: |
@@ -136,7 +136,7 @@ SIPP-V2-FPGA-Accelerator/
 │   │   └── synth_*.ys                 # Yosys open-source synthesis scripts
 │   └── bitstream/
 │       ├── README.md                  # Handoff and memory-map documentation
-│       ├── design_1_V4.bit            # Verified working PYNQ-Z2 FPGA bitstream
+│       ├── design_1_V4.bit            # Verified working PYNQ-Z1 FPGA bitstream
 │       └── design_1_V4.hwh            # Hardware handoff descriptor
 │
 ├── sw/                                # Host Software & Python Drivers
@@ -174,7 +174,7 @@ To synthesize headlessly using the included automated Tcl script:
 vivado -mode batch -source fpga/scripts/build_sipp_v2.tcl
 ```
 
-### 3. Deploy on PYNQ-Z2 Board
+### 3. Deploy on PYNQ-Z1 Board
 Upload the pre-built hardware handoff files from `fpga/bitstream/` to your PYNQ board and execute in Jupyter:
 ```python
 from pynq import Overlay, allocate

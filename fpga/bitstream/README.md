@@ -1,6 +1,6 @@
 # SIPP V2 Hardware Handoff & Bitstream Artifacts
 
-This directory contains the verified, lab-tested hardware handoff files generated in Xilinx Vivado for the **PYNQ-Z2** (Xilinx Zynq-7000 SoC, `xc7z020clg400-1`).
+This directory contains the verified, lab-tested hardware handoff files generated in Xilinx Vivado for the **PYNQ-Z1** (Xilinx Zynq-7000 SoC, `xc7z020clg400-1`).
 
 ## Files Overview
 
@@ -12,7 +12,7 @@ This directory contains the verified, lab-tested hardware handoff files generate
 ## Target Specifications
 
 - **Device Part:** `xc7z020clg400-1`
-- **Board Target:** Tul PYNQ-Z2
+- **Board Target:** Tul PYNQ-Z1
 - **Interface:** AXI4-Stream (`s_axis` 256-bit input, `m_axis` 32-bit output)
 - **DMA Configuration:** Direct Register Mode (Scatter-Gather disabled for low latency)
 - **Fabric Clock:** 100 MHz (`FCLK_CLK0`)
