@@ -1,0 +1,8 @@
+read_verilog -sv -lib +/xilinx/cells_sim.v
+read_verilog -sv D:/professional/IITM/RTL_Project/SIPP_V2/rtl/fp32_pkg.sv
+read_verilog -sv D:/professional/IITM/RTL_Project/SIPP_V2/rtl/sipp_fp32_mac.sv
+read_verilog -sv D:/professional/IITM/RTL_Project/SIPP_V2/rtl/sipp_adder_tree.sv
+read_verilog -sv D:/professional/IITM/RTL_Project/SIPP_V2/rtl/sipp_v2_parallel.sv
+hierarchy -check -top sipp_v2_parallel
+synth_xilinx -top sipp_v2_parallel -flatten
+stat -tech xilinx

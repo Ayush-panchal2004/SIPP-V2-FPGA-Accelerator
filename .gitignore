@@ -1,0 +1,36 @@
+# ==============================================================================
+# SIPP V2 — Git Ignore for SystemVerilog & Vivado FPGA Development
+# ==============================================================================
+
+# Vivado Project & Run Directories
+*.runs/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.sim/
+*.jou
+*.log
+*.str
+*.rpt
+*.dcp
+.Xil/
+vivado*.jou
+vivado*.log
+
+# Simulation Artifacts
+*.vvp
+*.vcd
+*.wdb
+*.wcfg.bak
+xsim.dir/
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+Desktop.ini

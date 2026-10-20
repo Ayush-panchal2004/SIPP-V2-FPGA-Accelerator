@@ -1,0 +1,6 @@
+
+read_verilog -sv rtl/fp32_pkg.sv
+read_verilog -sv rtl/sipp_adder_tree.sv
+hierarchy -check -top sipp_adder_tree -chparam N 32
+synth_xilinx -top sipp_adder_tree
+stat
